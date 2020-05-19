@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Fortune Cookie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="title">
+    <h1>Fortune Cookie</h1>
+    <h2>What's your Fortune today?</h2>
+    <h2 id="second">Now, Crack the Cookie!</h2>
+  </div>
+  <div id="parent">
+    <img src="image/fortune0.png" alt="Crack the Fortune Cookie" id="area1" onclick="which()">
+  </div>
+
+  <script>
+    var dekiru = true;
+    function which(){
+    if (dekiru == true){
+     dekiru = false;
+     var a = Math.random() * 5;
+     var n = Math.floor( a ) +1;
+     var koreni = "image/fortune"+n+".png";
+     document.getElementById("area1").src = koreni;
+     setTimeout("modosu()",3000);
+   }
+}
+    function modosu(){
+     document.getElementById("area1").src = "image/fortune0.png";
+     dekiru = true;
+}
+  </script>
+</body>
+</html>

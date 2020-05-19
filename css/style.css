@@ -1,0 +1,17 @@
+body {
+    background: #efefef;
+    width: 900px;
+}
+
+.title {
+    margin-left: 50px;
+}
+
+#second {
+    margin-left: 170px;
+}
+
+#area1 {
+    cursor: pointer;
+}
+
