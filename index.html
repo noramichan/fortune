@@ -12,24 +12,24 @@
     <h2 id="second">Now, Crack the Cookie!</h2>
   </div>
   <div id="parent">
-    <img src="image/fortune0.png" alt="Crack the Fortune Cookie" id="area1" onclick="which()">
+    <img src="image/fortune0.png" alt="Crack the Fortune Cookie" id="cookie" onclick="which()">
   </div>
 
   <script>
-    var dekiru = true;
+    var able = true;
     function which(){
-    if (dekiru == true){
-     dekiru = false;
+    if (able == true){
+     able = false;
      var a = Math.random() * 5;
      var n = Math.floor( a ) +1;
-     var koreni = "image/fortune"+n+".png";
-     document.getElementById("area1").src = koreni;
-     setTimeout("modosu()",3000);
+     var thisone = "image/fortune"+n+".png";
+     document.getElementById("cookie").src = thisone;
+     setTimeout("reset()",3000);
    }
 }
-    function modosu(){
-     document.getElementById("area1").src = "image/fortune0.png";
-     dekiru = true;
+    function reset(){
+     document.getElementById("cookie").src = "image/fortune0.png";
+     able = true;
 }
   </script>
 </body>
